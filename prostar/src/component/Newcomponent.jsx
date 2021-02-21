@@ -31,12 +31,12 @@ export default class Newcomponent extends Component {
     this.setState({stars:tempArray})
       
     }
-    sortbyname = () =>{
+    sortByName = () =>{
        var temp= this.state.stars;
       temp.sort((a, b) => (a.name > b.name) ? 1 : -1)
       this.setState({stars:temp});
     }
-    sortbypopularity = () =>{
+    sortByPopularity = () =>{
        var temp= this.state.stars;
        temp.sort((a, b) => (a.popularity > b.popularity) ? 1 : -1)
         this.setState({stars:temp});
@@ -45,8 +45,8 @@ export default class Newcomponent extends Component {
         return (
           <React.Fragment>
                <button onClick={this.addNewItem}>add</button>
-              <button onClick={this.sortbypopularity}>sortbypopularity</button>
-                <button onClick={this.sortbyname}>sortbyname</button>
+              <button onClick={this.sortbypopularity}>sortByPopularity</button>
+                <button onClick={this.sortbyname}>sortByName</button>
                  <ul>{this.renderItems()} </ul>           
                  </React.Fragment>
         );
